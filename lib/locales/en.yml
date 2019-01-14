@@ -1,0 +1,37 @@
+en:
+  main_header: "Codebreaker Rack application"
+  rules:
+    "Welcome to Codebreaker!<br>
+    Codebreaker is a logic game in which a code-breaker tries to
+    break a secret code of four numbers between 1 and 6.<br>
+    For each attempt you'll receive a message to realize which numbers in your
+    guess are correct and which aren't.<br>
+    A + indicates an exact match: one of the numbers in the guess is the same
+    as one of the numbers in the secret code and in the same position.<br>
+    A - indicates a number match: one of the numbers in the guess is the same
+    as one of the numbers in the secret code but in a different position.<br>
+    Use hint command to see a random character of secret code."
+  short_rules: 'Try to guess 4-digit number, that consists of numbers in a range from 1 to 6.'
+  congratulations: "Congratulations, %{player_name}! You won the game!"
+  game_header: "Hello, %{player_name}! Try to guess 4-digit number, that consists of numbers in a range from 1 to 6."
+  game_lost: "Oops, %{player_name}! You lose the game!"
+  code_was: The code was
+  home_button: Home
+  play_again_button: Play again!
+  rules_button: Rules
+  statistics_button: Statistics
+  submit_button: Submit
+  start_game_button: Start the game!
+  show_hint_button: Show hint!
+  level_label: "Level:"
+  hints_label: "Hints:"
+  hints_left_label: "Hints Left:"
+  attempts_label: "Attempts:"
+  attempts_left_label: "Attempts Left:"
+  player_name_label: "Player's name:"
+  game_level_label: "Game level:"
+  choose_level: "Choose game level..."
+  easy_level: Easy
+  medium_level: Medium
+  hard_level: Hard
+  not_found: Not Found

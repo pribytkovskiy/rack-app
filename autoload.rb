@@ -1,0 +1,5 @@
+require 'i18n'
+require 'haml'
+require 'codebreaker'
+require './lib/racker'
+require './lib/locale_config'

@@ -1,0 +1,27 @@
+.row
+  .col.button
+    %button.btn.btn-primary{:disabled => "disabled", :type => "button"}
+      = I18n.t(:level_label)
+      %span.badge.badge-light
+        = @request.session['level']
+    %button.btn.btn-primary{:disabled => "disabled", :type => "button"}
+      = I18n.t(:attempts_left_label)
+      %span.badge.badge-light
+        = @request.session[:game].attempts
+    %button.btn.btn-primary{:disabled => "disabled", :type => "button"}
+      = I18n.t(:hints_left_label)
+      %span.badge.badge-light
+        = @request.session[:game].hints
+%hr.mb-4/
+.row
+  .text-center
+    .text-center
+      %h3.text-white
+        = I18n.t(:congratulations, player_name: = @request.session[:game].name)
+        - save_and_clear
+    %img.img-fluid{:alt => "You won the game!", :src => "public/images/won.gif"}/
+%hr.mb-4/
+%a.btn.btn-primary.btn-lg{:href => "/", :role => "button"}
+  = I18n.t(:play_again_button)
+%a.btn.btn-success.btn-lg.float-right{:href => "/statistics", :role => "button"}
+  = I18n.t(:statistics_button)

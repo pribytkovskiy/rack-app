@@ -1,0 +1,7 @@
+.form-group.guess_markers_list
+  #guess_marker
+    - unless @request.session[:guess] == nil
+      %button.btn.marks{:disabled => "disabled", :type => "button"}= @request.session[:guess][0] || 'x'
+      %button.btn.marks{:disabled => "disabled", :type => "button"}= @request.session[:guess][1] || 'x'
+      %button.btn.marks{:disabled => "disabled", :type => "button"}= @request.session[:guess][2] || 'x'
+      %button.btn.marks{:disabled => "disabled", :type => "button"}= @request.session[:guess][3] || 'x'

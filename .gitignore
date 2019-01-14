@@ -1,0 +1,5 @@
+db/statistics.txt
+coverage
+node_modules
+.history
+.rspec_status
