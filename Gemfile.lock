@@ -1,11 +1,3 @@
-GIT
-  remote: https://github.com/pribytkovskiy/codebreaker_gem.git
-  revision: 040081144fa57029eb31ca4e722e88604f5c9000
-  specs:
-    codebreaker (0.1.0)
-      i18n
-      pry
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -113,7 +105,6 @@ PLATFORMS
 
 DEPENDENCIES
   capybara
-  codebreaker!
   fasterer
   haml
   i18n
