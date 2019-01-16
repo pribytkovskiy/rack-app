@@ -51,7 +51,7 @@ feature Racker do
       expect(page).to have_css('span#hint')
     end
 
-    context 'when game_over' do 
+    context 'when game_over' do
       before do
         10.times do
           fill_in('number', with: number)

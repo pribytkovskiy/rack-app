@@ -17,7 +17,7 @@
   .text-center
     .text-center
       %h3.text-white
-        = I18n.t(:congratulations, player_name: = @request.session[:game].name)
+        = I18n.t(:congratulations, player_name: @request.session[:game].name)
         - save_and_clear
     %img.img-fluid{:alt => "You won the game!", :src => "public/images/won.gif"}/
 %hr.mb-4/

@@ -1,4 +1,4 @@
-db/statistics.txt
+db/statistics.yml
 coverage
 node_modules
 .history

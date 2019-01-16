@@ -31,7 +31,7 @@ en:
   player_name_label: "Player's name:"
   game_level_label: "Game level:"
   choose_level: "Choose game level..."
-  easy_level: Easy
-  medium_level: Medium
-  hard_level: Hard
+  easy_level: Easy - 15 attempts - 2 hints
+  medium_level: Medium - 10 attempts - 1 hints
+  hard_level: Hard - 5 attempts - 1 hints
   not_found: Not Found

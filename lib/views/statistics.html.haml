@@ -1,6 +1,22 @@
 %p.lead.text-white-70 Statistics:
 %hr.mb-4/
-= Codebreaker::Game.new.open
+.table-responsive-md.scores
+  %table.table.table-striped.table.table-sm
+    %thead
+      %tr
+        %th{:scope => "col"} #
+        %th{:scope => "col"} Name
+        %th{:scope => "col"} Level
+        %th{:scope => "col"} Attempts Left
+        %th{:scope => "col"} Hints Left
+        %th{:scope => "col"} Date
+    %tbody
+      - if Codebreaker::Game.new.load.empty?
+        %tr
+          %th.text-center{:colspan => "6"}
+            There are no winners yet! Be the first!
+      - else
+        = render 'partials/_table_body'
 %hr.mb-4/
 %a.btn.btn-primary.btn-lg{:href => "/", :role => "button"}
   Home
