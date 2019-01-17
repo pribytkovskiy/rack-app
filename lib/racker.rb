@@ -40,7 +40,7 @@ class Racker
   end
 
   def play_game
-    return redirect_to(:menu) if request.params['number'].nil?
+    return redirect_to(:menu) unless request.params['number']
 
     game
     redirect_to(check_game)
@@ -55,7 +55,7 @@ class Racker
   end
 
   def hint
-    return redirect_to(:menu) if request.session[:game].nil?
+    return redirect_to(:menu) unless request.session[:game]
 
     @request.session[:hint] = request.session[:game].hint
     redirect_to(:game)
