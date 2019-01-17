@@ -1,0 +1,32 @@
+%p.lead.text-white-70
+  = I18n.t(:game_header, player_name: @request.session[:game].name)
+%hr.mb-4/
+.row
+  .col.button
+    %button.btn.btn-primary{:disabled => "disabled", :type => "button"}
+      = I18n.t(:level_label)
+      %span.badge.badge-light
+        = @request.session['level']
+  .col.text-center.button
+    %button.btn.btn-primary{:disabled => "disabled", :type => "button"}
+      = I18n.t(:attempts_label)
+      %span.badge.badge-light
+        = @request.session[:game].attempts
+  .col.button
+    %button.btn.btn-primary.float-right{:disabled => "disabled", :type => "button"}
+      = I18n.t(:hints_label)
+      %span.badge.badge-light
+        = @request.session[:game].hints
+%hr.mb-4/
+%form{:action => "/play_game", :method => "post"}
+  .form-group
+    %input#number.form-control.guess_input{:autocomplete => "off", :autofocus => "", :maxlength => "4", :name => "number", :pattern => "^[1-6]{4}$", :placeholder => "#{@request.session[:number] || 'Make a guess!'}", :required => ""}/
+  = render 'partials/_mark'
+  %hr.mb-4/
+  %button.btn.btn-primary.btn-lg{:type => "submit"}
+    = I18n.t(:submit_button)
+  %a{:class => "btn btn-warning btn-lg float-right #{'disabled' if @request.session[:game].hints.zero?}", :href => "/hint", :role => "button"}
+    = I18n.t(:show_hint_button)
+    - @request.session[:game].hint_array_view.each do |hint|
+      %span#hint.badge.badge-light
+        = hint

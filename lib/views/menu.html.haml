@@ -1,0 +1,21 @@
+.row
+  %p.lead.text-white-70
+    = I18n.t(:short_rules)
+%hr.mb-4/
+%form{:action => "/start_game", :method => "post"}
+  .form-group
+    %label.lead.label{:for => "name"}= I18n.t(:player_name_label)
+    %input#player_name.form-control{:autofocus => "", :name => "name", :pattern => "^[\\w\\u0400-\\u04ff]{3,20}$", :placeholder => "Your name", :required => "", :value => "#{@request.cookies['name']}"}/
+  .form-group
+    %label.lead.label{:for => "level"}= I18n.t(:game_level_label)
+    %select#level.custom-select{:name => "level", :required => ""}
+      %option{:value => ""}= I18n.t(:choose_level)
+      %option{:value => "easy"}= I18n.t(:easy_level)
+      %option{:value => "medium"}= I18n.t(:medium_level)
+      %option{:value => "hell"}= I18n.t(:hard_level)
+  %hr.mb-4/
+  %button.btn.btn-primary.btn-lg{:type => "submit"}
+    = I18n.t(:start_game_button)
+  %span.float-right
+    %a.btn.btn-warning.btn-lg{:href => "/rules", :role => "button"}= I18n.t(:rules_button)
+    %a.btn.btn-success.btn-lg{:href => "/statistics", :role => "button"}= I18n.t(:statistics_button)
